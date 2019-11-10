@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bai+Jamjuree|Carrois+Gothic+SC|Coda+Caption:800|Darker+Grotesque|Do+Hyeon|Gilda+Display|Homenaje|IM+Fell+English+SC|Krub|Montez|Overpass+Mono|Sansita|Seaweed+Script|Sedgwick+Ave+Display|Vast+Shadow|Yeon+Sung&display=swap');
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: inherit;
+}
+
+:root {
+ --yeon-sung: 'Yeon Sung', cursive;
+ --coda-caption: 'Coda Caption', sans-serif;
+ --overpass-mono: 'Overpass Mono', monospace;
+ --bai-jamjuree: 'Bai Jamjuree', sans-serif;
+ --krub: 'Krub', sans-serif;
+ --anonymous-pro: 'Anonymous Pro', monospace;
+ --dark-grotesque: 'Darker Grotesque', sans-serif;
+ --gilder-display: 'Gilda Display', serif;
+ --homenaje: 'Homenaje', sans-serif;
+ --sansita: 'Sansita', sans-serif;
+ --do-hyeon: 'Do Hyeon', sans-serif;
+ --fell-english: 'IM Fell English SC', serif;
+ --seaweed: 'Seaweed Script', cursive;
+ --sedgwick: 'Sedgwick Ave Display', cursive;
+ --vast-shadow: 'Vast Shadow', cursive;
+ --carrois: 'Carrois Gothic SC', sans-serif;
+ --montez: 'Montez', cursive;
+
+ --pastel-red: #FF6666;
+ --booger-buster: #CCFF66;
+ --blue-mag-violet: #5D2E8C;
+ --max-blue-green:
+ #2EC4B6;
+ --banana-mania: #F1E8B8;
+ --medium-aqua: #73E2A7;
+ --prussian-blue:
+ #0B3954;
+ --pale-aqua: #BFD7EA;
+ --yellow-green:
+ #E0FF4F;
+ --amaranth-purple: #A01A7D;
+ --russian-violet: #311847;
+ --dark-salmon: #E09F7D;
+ --dark-sienna: #3C1518;
+ --up-maroon: #69140E;
+ --brown: #A44200;
+ --dark-cerulean: #1B4079;
+ --teal-blue: #4D7C8A;
+ --roman-silver: #7F9C96;
+ --sunny: #FFF275;
+ --smokey-topaz: #A23E48;
+ --shadow-blue: #6C8EAD;
+ --sunny-2: #EDF67D;
+ --magenta-pink: #F896D8;
+ --pale-violet: #CA7DF9;
+ --deep-koamaru: #3D315B;
+ --independence: #444B6E;
+ --xanadu: #708B75;
+ --mikado-yellow: #F9C80E;
+ --giants--orange: #F86624;
+ --rebecca-purple: #662E9B;
+ --gunmetal: #272838;
+ --buff: #F3DE8A;
+ --dark-slate-blue: #3D348B;
+ --queen-blue: #456990;
+ --silver-lake: #6290C3;
+ --princeton-orange: #F28123;
+ --lemon-jelly: #F7F052;
+ --oxford-blue: #0A2342;
+ --jungle-green: #2CA58D;
+}
+
+html {
+ font-size: 10px;
+ box-sizing: border-box;
+}
+
+a {
+ text-decoration: none;
+}
+
+ul {
+ list-style: none;
+}
+
+img {
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+}
+
+p {
+ font-size: 1.6rem;
+}
+
+section {
+ padding: 5rem 0;
+}
+
+body {
+ background: var(--pastel-red);
+ font-family: var(--montez);
+}
+
+/* Header */
+
+header {
+ width: 100%;
+ height: 7rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.container {
+ width: 100%;
+ max-width: 98rem;
+ padding: 0 1.5rem;
+ margin: 0 auto;
+}
+
+nav {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 1rem 0;
+}
+
+.nav__brand {
+ width: 4rem;
+}
+
+.menu__icons {
+ font-size: 3.5rem;
+ color: var(--max-blue-green);
+ cursor: pointer;
+}
+
+.close i {
+ color: var(--pale-aqua);
+}
+
+.nav__list {
+ width: 25rem;
+ height: 100vh;
+ background: var(--silver-lake);
+ position: fixed;
+ top: 0;
+ right: -26rem;
+ opacity: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ transition: all 630ms ease-in-out, opacity 810ms ease-in-out;
+ z-index: 1500;
+}
+
+.nav__list.active {
+ right: 0;
+ opacity: 1;
+}
+
+.close {
+ position: absolute;
+ top: 2rem;
+ left: 2rem;
+}
+
+.nav__item {
+ margin: 1.5rem 0;
+}
+
+.nav__link {
+ font-size: 1.6rem;
+ color: var(--pale-aqua);
+ letter-spacing: .3rem;
+ text-transform: uppercase;
+}
+
+/* Hero */
+
+
+
+
