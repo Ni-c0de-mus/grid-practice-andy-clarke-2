@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bai+Jamjuree|Carrois+Gothic+SC|Coda+Caption:800|Darker+Grotesque|Do+Hyeon|Gilda+Display|Homenaje|IM+Fell+English+SC|Krub|Montez|Overpass+Mono|Sansita|Seaweed+Script|Sedgwick+Ave+Display|Vast+Shadow|Yeon+Sung&display=swap');
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: inherit;
+}
+
+:root {
+ --pastel-red: #FF6666;
+--booger-buster: #CCFF66;
+--blue-mag-violet: #5D2E8C;
+--max-blue-green: #2EC4B6;
+--banana-mania: #F1E8B8;
+--medium-aqua: #73E2A7;
+--prussian-blue:  #0B3954;
+--pale-aqua: #BFD7EA;
+--yellow-green: #E0FF4F;
+--amaranth-purple: #A01A7D;
+--russian-violet: #311847;
+--dark-salmon: #E09F7D;
+--dark-sienna: #3C1518;
+--up-maroon: #69140E;
+--brown: #A44200;
+--dark-cerulean: #1B4079;
+--teal-blue: #4D7C8A;
+--roman-silver: #7F9C96;
+--sunny: #FFF275;
+--smokey-topaz: #A23E48;
+--shadow-blue: #6C8EAD;
+--sunny-2: #EDF67D;
+--magenta-pink: #F896D8;
+--pale-violet: #CA7DF9;
+--deep-koamaru: #3D315B;
+--independence: #444B6E;
+--xanadu: #708B75;
+--mikado-yellow: #F9C80E;
+--giants--orange: #F86624;
+--rebecca-purple: #662E9B;
+--gunmetal: #272838;
+--buff: #F3DE8A;
+--dark-slate-blue: #3D348B;
+--queen-blue: #456990;
+--silver-lake: #6290C3;
+--princeton-orange: #F28123;
+--lemon-jelly: #F7F052;
+--oxford-blue: #0A2342;
+--jungle-green: #2CA58D;
+
+/* Fonts */
+
+--yeon-sung: 'Yeon Sung', cursive;
+--coda-caption: 'Coda Caption', sans-serif;
+--overpass-mono: 'Overpass Mono', monospace;
+--bai-jamjuree: 'Bai Jamjuree', sans-serif;
+--krub: 'Krub', sans-serif;
+--anonymous-pro: 'Anonymous Pro', monospace;
+--dark-grotesque: 'Darker Grotesque', sans-serif;
+--gilder-display: 'Gilda Display', serif;
+--homenaje: 'Homenaje', sans-serif;
+--sansita: 'Sansita', sans-serif;
+--do-hyeon: 'Do Hyeon', sans-serif;
+--fell-english: 'IM Fell English SC', serif;
+--seaweed: 'Seaweed Script', cursive;
+--sedgwick: 'Sedgwick Ave Display', cursive;
+--vast-shadow: 'Vast Shadow', cursive;
+--carrois: 'Carrois Gothic SC', sans-serif;
+--montez: 'Montez', cursive;
+
+}
+
+html {
+ font-size: 10px;
+ box-sizing: border-box;
+}
+
+a {
+ text-decoration: none;
+}
+
+ul {
+ list-style: none;
+}
+
+img {
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+}
+
+p {
+ font-size: 1.6rem;
+}
+
+body {
+ background: var(--queen-blue);
+ font-family: var(--vast-shadow);
+ font-size: 3rem;
+ color: var(--smokey-topaz);
+ text-align: center;
+}
+
+/* Grid */
+
+#content {
+ position: relative;
+ display: grid;
+ grid-template-columns: repeat(12, 1fr);
+ grid-auto-rows: minmax(10rem, auto);
+ grid-gap: 1rem;
+ max-width: 98rem;
+ margin: 0 auto;
+}
+
+#content>* {
+ background: var(--pale-aqua);
+ padding: 3rem;
+ border: .2rem solid var(--smokey-topaz);
+}
+
+header {
+ grid-column: 1 / 13 ;
+}
+
+main {
+ grid-column: 4 /13;
+ grid-row: 2 / 4;
+}
+
+aside {
+ grid-column: 1 / 4;
+}
+
+section {
+ grid-column: 1 / 13;
+ grid-row: 4 / 6;
+}
+
+nav {
+ grid-column: 1 / 4;
+}
+
+footer {
+ grid-column: 1 / 13;
+}
+
+
+/* Grid Overlay */
+
+#grid {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ grid-template-columns: repeat(9, 1fr);
+ grid-auto-rows: minmax(100%, auto);
+ width: 100%;
+ height: 100%;
+ background: transparent;
+ padding: 0;
+}
+
+#grid p {
+ border: .2rem solid;
+ background: #000;
+ margin: 0;
+ opacity: 0.2;
+}
+
+#grid2 {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ grid-template-columns: repeat(5, 1fr);
+ grid-auto-rows: minmax(100%, auto);
+ width: 100%;
+ height: 100%;
+ background: transparent;
+ padding: 0;
+ z-index: 2;
+}
+
+#grid2 p {
+ border: .2rem solid;
+ background: #000;
+ margin: 0;
+ opacity: 0.2;
+}
+
+input:checked + #content #grid {
+ display: grid;
+}
+
+input:checked + #content #grid2 {
+ display: grid;
+}

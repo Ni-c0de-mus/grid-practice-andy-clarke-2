@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bai+Jamjuree|Carrois+Gothic+SC|Coda+Caption:800|Darker+Grotesque|Do+Hyeon|Gilda+Display|Homenaje|IM+Fell+English+SC|Krub|Montez|Overpass+Mono|Sansita|Seaweed+Script|Sedgwick+Ave+Display|Vast+Shadow|Yeon+Sung&display=swap');
 
+
 *,
 *::before,
 *::after {
  margin: 0;
  padding: 0;
- box-sizing: inherit;
+ -webkit-box-sizing: inherit;
+         box-sizing: inherit;
 }
 
 :root {
@@ -71,9 +73,12 @@
  --jungle-green: #2CA58D;
 }
 
+/* Universal Styles */
+
 html {
  font-size: 10px;
- box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
 }
 
 a {
@@ -99,140 +104,84 @@ section {
 }
 
 body {
- background: var(--pastel-red);
- font-family: var(--montez);
-}
-
-/* Header */
-
-header {
- width: 100%;
- height: 7rem;
- position: fixed;
- top: 0;
- left: 0;
- z-index: 1;
-}
-
-.container {
- width: 100%;
- max-width: 98rem;
- padding: 0 1.5rem;
- margin: 0 auto;
-}
-
-nav {
- width: 100%;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 1rem 0;
-}
-
-.nav__brand {
- width: 3.5rem;
-}
-
-.menu__icons {
- font-size: 3.5rem;
- color: var(--max-blue-green);
- transition: color 650ms;
- cursor: pointer;
-}
-
-.open:hover {
- color: var(--amaranth-purple);
-}
-
-.close i {
+ font-family: var(--carrois);
+ background: var(--dark-cerulean);
  color: var(--pale-aqua);
+}
+
+/* Navigation */
+
+.main__nav {
+ width: 100%;
+ height: 100vh;
+ background-color: var(--dark-sienna);
+ position: fixed;
+ top: -100vh;
+ -webkit-transition: top 500ms ease;
+ transition: top 500ms ease;
+ z-index: -1;
 }
 
 .nav__list {
- width: 25rem;
- height: 100vh;
- background: var(--silver-lake);
- position: fixed;
- top: 0;
- right: -26rem;
- opacity: 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- transition: all 630ms ease-in-out, opacity 810ms ease-in-out;
- z-index: 1500;
-}
-
-.nav__list.active {
- right: 0;
- opacity: 1;
-}
-
-.close {
- position: absolute;
- top: 2rem;
- left: 2rem;
-}
-
-.nav__item {
- margin: 1.5rem 0;
+ padding: 0;
+ text-align: center;
+ margin: 5rem auto;
 }
 
 .nav__link {
- font-size: 1.6rem;
- color: var(--pale-aqua);
- letter-spacing: .3rem;
- text-transform: uppercase;
-}
-
-/* Hero */
-
-#hero {
- width: 100%;
- height: 80vh;
- background: linear-gradient(135deg, rgba(3, 0, 0, .7) 0%, rgba(5, 7, 7, .3) ) 100%, url('../img/dark-leaves.jpg') center no-repeat;
- background-size: cover;
- position: relative;
-}
-
-.main__message {
- width: 100%;
- max-width: 50rem;
- color: var(--booger-buster);
- text-transform: uppercase;
- transform: translateY(40%);
-}
-
-.main__message h3 {
- font-size: 1.6rem;
- letter-spacing: .2rem;
-}
-
-.main__message h1 {
  font-size: 3rem;
- letter-spacing: .2rem;
- margin: 1rem 0;
+ font-weight: 700;
+ color: var(--pale-aqua);
+ letter-spacing: 1.2rem;
 }
 
-.main__message p {
- text-transform: lowercase;
- letter-spacing: .1rem;
+.nav__item {
+ margin-bottom: 2rem;
 }
 
-.btn {
- background-color: var(--amaranth-purple);
- border-radius: 2rem;
- color: var(--booger-buster);
- margin-top: 2rem;
- display: inline-block;
- padding: 1rem 2.5rem;
- text-transform: uppercase;
- transition: background-color 650ms ease;
+.btn__line {
+ background-color: var(--pastel-red);
+ width: 3rem;
+ height: .3rem;
+ -webkit-transition: -webkit-transform 500ms background-color;
+ transition: -webkit-transform 500ms background-color;
+ transition: transform 500ms background-color;
+ transition: transform 500ms background-color, -webkit-transform 500ms background-color;
 }
 
-.btn:hover {
- background-color: var(--max-blue-green);
+.btn__line:not(:last-child) {
+ margin-bottom: .6rem;
 }
+
+.nav__btn {
+ position: fixed;
+ bottom: 5rem;
+ right: 5rem;
+ cursor: pointer;
+}
+
+.checkbox:checked ~ label .btn__line__1 {
+ -webkit-transform: rotate(-45deg) translate(-6, 7px);
+         transform: rotate(-45deg) translate(-6, 7px);
+}
+
+checkbox:checked ~ label .btn__line__2 {
+ opacity: 0;
+}
+
+.checkbox:checked ~ label .btn__line__3 {
+ -webkit-transform: rotate(45deg) translate(-6, -7px);
+         transform: rotate(45deg) translate(-6, -7px);
+}
+
+.checkbox:checked ~ label .btn__line {
+ background-color: var(--pale-aqua);
+}
+
+.checkbox:checked ~ .main__nav {
+ top: 0;
+}
+
+
 
 

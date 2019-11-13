@@ -99,8 +99,9 @@ section {
 }
 
 body {
- background: var(--pastel-red);
- font-family: var(--montez);
+ background: var(--dark-slate-blue);
+ font-family: var(--homenaje);
+ color: var(--banana-mania);
 }
 
 /* Header */
@@ -108,7 +109,7 @@ body {
 header {
  width: 100%;
  height: 7rem;
- position: fixed;
+ position: absolute;
  top: 0;
  left: 0;
  z-index: 1;
@@ -124,34 +125,34 @@ header {
 nav {
  width: 100%;
  display: flex;
- align-items: center;
+ align-content: center;
  justify-content: space-between;
  padding: 1rem 0;
 }
 
 .nav__brand {
- width: 3.5rem;
+ width: 4rem;
 }
 
 .menu__icons {
  font-size: 3.5rem;
- color: var(--max-blue-green);
- transition: color 650ms;
+ color: var(--banana-mania);
  cursor: pointer;
 }
 
-.open:hover {
- color: var(--amaranth-purple);
+.close i {
+ color: var(--booger-buster);
+ transition: color 650ms ease;
 }
 
-.close i {
- color: var(--pale-aqua);
+.close i:hover {
+ color: var(--pale-violet);
 }
 
 .nav__list {
  width: 25rem;
  height: 100vh;
- background: var(--silver-lake);
+ background-color: var(--dark-sienna);
  position: fixed;
  top: 0;
  right: -26rem;
@@ -160,7 +161,7 @@ nav {
  flex-direction: column;
  align-items: center;
  justify-content: center;
- transition: all 630ms ease-in-out, opacity 810ms ease-in-out;
+ transition: all 650ms ease-in-out, opacity 820ms ease;
  z-index: 1500;
 }
 
@@ -180,59 +181,9 @@ nav {
 }
 
 .nav__link {
- font-size: 1.6rem;
- color: var(--pale-aqua);
- letter-spacing: .3rem;
- text-transform: uppercase;
-}
-
-/* Hero */
-
-#hero {
- width: 100%;
- height: 80vh;
- background: linear-gradient(135deg, rgba(3, 0, 0, .7) 0%, rgba(5, 7, 7, .3) ) 100%, url('../img/dark-leaves.jpg') center no-repeat;
- background-size: cover;
- position: relative;
-}
-
-.main__message {
- width: 100%;
- max-width: 50rem;
  color: var(--booger-buster);
- text-transform: uppercase;
- transform: translateY(40%);
-}
-
-.main__message h3 {
  font-size: 1.6rem;
+ text-transform: uppercase;
  letter-spacing: .2rem;
 }
-
-.main__message h1 {
- font-size: 3rem;
- letter-spacing: .2rem;
- margin: 1rem 0;
-}
-
-.main__message p {
- text-transform: lowercase;
- letter-spacing: .1rem;
-}
-
-.btn {
- background-color: var(--amaranth-purple);
- border-radius: 2rem;
- color: var(--booger-buster);
- margin-top: 2rem;
- display: inline-block;
- padding: 1rem 2.5rem;
- text-transform: uppercase;
- transition: background-color 650ms ease;
-}
-
-.btn:hover {
- background-color: var(--max-blue-green);
-}
-
 
